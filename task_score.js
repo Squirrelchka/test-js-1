@@ -12,3 +12,6 @@ let surName = "Gromova"
 let fullName = newName + " " + surName
 let studName = fullName
 console.log(`The average value is ${studName}.`)
+
+let studName2 = fullName.slice(0, 1) + "." + surName;
+console.log(`The average value is "${studName2}"`)
