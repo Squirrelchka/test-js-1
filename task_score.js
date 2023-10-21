@@ -15,3 +15,4 @@ console.log(`The average score for student ${studName} is ${floatNumber}.`)
 
 studName.slice(0, 1) + "." + surName;
 console.log(`The average value is "${studName}"`)
+
