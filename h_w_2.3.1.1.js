@@ -22,7 +22,7 @@ const players = [
     },
   ];
   console.log(players)
-  
+
   let scores = [];
   
   for (let player in players) {
@@ -32,5 +32,20 @@ const players = [
   
   let maxScore = Math.max(...scores);
   console.log(maxScore)
+
+  // Граничные значения
+  let minScore = Math.min(...scores);
+  console.log(minScore);
+
+  let MinScore = minScore + 1;
+  let MaxScore = maxScore - 1;
+  console.log(MinScore);
+  console.log(MaxScore);
+
+  let MinScore2 = minScore - 1;
+  let MaxScore2 = maxScore + 1;
+  console.log(MinScore2);
+  console.log(MaxScore2);
   
+   
   
