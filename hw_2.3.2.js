@@ -13,13 +13,18 @@ class Button {
   }
 }
 
-let newButton1 = new Button(5, 12, "button", "green");
-let newButton2 = new Button(52, 15, "button", "red");
+let newButton1 = new Button(5, 1, "button", "green");
+let newButton2 = new Button(5, 12, "button", "green");
 
-newButton1.onClick();
+function testButton(btn1, btn2) {
+if (btn1.width === btn2.width && 
+  btn1.height === btn2.height && 
+  btn1.type === btn2.type && 
+  btn1.color === btn2.color) {
+  console.log("true");
+} else {
+  console.log("false");
+}
+}
 
-function testButton(obj) {
-   console.log(obj instanceof Button )
-  }
-
-testButton(newButton2);
+testButton(newButton1, newButton2);
