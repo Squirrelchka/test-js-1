@@ -21,17 +21,21 @@ const players = [
       scorePoints: 2356,
     },
   ];
-  console.log(players)
-
-  let scores = [];
+    let scores = [];
   
   for (let player in players) {
     scores.push(players[player].scorePoints);
   }
-  console.log(scores)
-  
+      
   let maxScore = Math.max(...scores);
   console.log(maxScore)
+
+  for(let player in players){
+    if(players[player].scorePoints === maxScore){
+      console.log(`Maxpoints has ${players[player].name}, its ${maxScore} points`)
+    }
+  }
+
 
   // Граничные значения
   let minScore = Math.min(...scores);
