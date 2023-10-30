@@ -28,7 +28,7 @@ const players = [
   }
       
   let maxScore = Math.max(...scores);
-  console.log(maxScore)
+ // console.log(maxScore)
 
   for(let player in players){
     if(players[player].scorePoints === maxScore){
