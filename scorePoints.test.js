@@ -1,63 +1,36 @@
 const scorePointsStud = require("./scorePoints");
 describe('scorePointsStud', () => {
     it('max scorePoints from scorePoints', () => {
-        const students = [
-            {
-                name: "Ivan",
-                scorePoints: 20,
-              },
-              {
-                name: "Petr",
-                scorePoints: 30,
-              },
-              {
-                name: "Vadim",
-                scorePoints: 40,
-              },
-              {
-                name: "Olga",
-                scorePoints: 50,
-              },
-            ];
-    
-      expect(scorePointsStud (students)).toBe(50);
+      const students = [
+        [
+          { "name": "Ivan", "scorePoints": 35, "date": "2022-10-11" },
+          { "name": "Maria", "scorePoints": 5, "date": "2022-10-10" },
+          { "name": "Olga", "scorePoints": 0, "date": "" },
+          { "name": "Stepan", "scorePoints": 35, "date": "2022-10-12" },
+          { "name": "Oleg", "scorePoints": 9, "date": "2022-10-01" },
+          { "name": "Zanna", "scorePoints": 15, "date": "2022-10-11" }
+        ],
+        [
+          { "name": "Margo", "scorePoints": 0, "date": "2022-10-11" },
+          { "name": "Natalia", "scorePoints": 25, "date": "2022-10-10" },
+          { "name": "Marina", "scorePoints": 25, "date": "2022-10-01" },
+          { "name": "Dmitry", "scorePoints": 25, "date": "2022-10-12" },
+          { "name": "Denis", "scorePoints": 0, "date": "2022-10-02" },
+          { "name": "Vadimyr", "scorePoints": 1, "date": "2022-10-11" }
+        ],
+        [
+          { "name": "Irina", "scorePoints": 0, "date": "2022-10-11" },
+          { "name": "Vasily", "scorePoints": 0, "date": "2022-10-10" },
+          { "name": "David", "scorePoints": 0, "date": "2022-10-11" },
+          { "name": "Kristina", "scorePoints": 0, "date": "2022-10-12" },
+          { "name": "Varvara", "scorePoints": 0, "date": "2022-10-01" },
+          { "name": "Tanya", "scorePoints": 0, "date": "2022-10-11" }
+        ]
+      ]
+      const answers = [35, 25, 0]
+    for(let i=0; i< students.length; i++){
+      expect(scorePointsStud (students[i])).toBe(answers[i]);
+    }
+      
     }); 
-    it('max scorePoints from scorePoints', () => {
-        const students = [
-            {
-                name: "Ivan",
-                scorePoints: 20,
-              },
-              {
-                name: "Petr",
-                scorePoints: 30,
-              },
-              {
-                name: "Vadim",
-                scorePoints: 40,
-              },
-              {
-                name: "Olga",
-                scorePoints: 50,
-              },
-            ];
-    
-      expect(scorePointsStud (students)).toBe();
-    }); 
-    
-});
-
-// it.each([
-//   [[ { name: "Ivan", scorePoints: 20 },
-//       { name: "Petr", scorePoints: 30 },
-//       { name: "Vadim", scorePoints: 40 },
-//       { name: "Olga", scorePoints: 50 } ], 50],
-//   [[ { name: "Ivan", scorePoints: 20 },
-//       { name: "Petr", scorePoints: 30 },
-//       { name: "Vadim", scorePoints: 40 },
-//       { name: "Olga", scorePoints: 50 }], 25],
-// ])
-// ('max scorePoints from scorePoints', (students, expected) => {
-//   expect(scorePointsStud(students)).toBe(50);
-// });
-
+  });
