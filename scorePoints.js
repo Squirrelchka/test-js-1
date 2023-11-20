@@ -41,7 +41,8 @@ function scorePointsStud(arr) {
         `Congratulations! ${arr[el].name}, you have earned the maximum points at ${arr[el].date}, its ${maxScore} `
       );
        }
-  }
+         }
+         return maxScore
 }
 
 students.forEach((el)=> scorePointsStud(el))
