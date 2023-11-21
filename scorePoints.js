@@ -53,7 +53,8 @@ function scorePointsStud(arr) {
     }
   }
 
-  // присваиваем переменной значение имени студента, у которого наименьшее количество в поле value в dateObj.
+    // присваиваем переменной значение имени студента, у которого наименьшее количество в поле value в dateObj.
+  // перебираем ключи и находим среди них тот, у которого наименьший value
 
   let minDateKeyName = Object.keys(dateObj).reduce((a, b) =>
     dateObj[a] < dateObj[b] ? a : b
@@ -62,15 +63,13 @@ function scorePointsStud(arr) {
   // выводим сообщение с именем студента, у которого наименьшее время выполнение задания и максимальный балл,
   //  а также дату выполнения. дату получаем обратно из секунд value в dateObj
 
-  console.log(
-    `Congratulations! ${minDateKeyName}, you have earned the maximum ${maxScore} points at ${
-      new Date(Math.min(...Object.values(dateObj))).toISOString().split("T")[0]
-    }`
-  );
+  let finalAnswer = `Congratulations! ${minDateKeyName}, you have earned the maximum ${maxScore} points at ${new Date(Math.min(...Object.values(dateObj))).toISOString().split("T")[0]}`
+  console.log(finalAnswer);
 
-  // возвращаем значение maxScore , нужен для тестов
+  // возвращаем значение finalAnswer , нужен для тестов
 
-  return maxScore;
+  return finalAnswer;
+  
 }
 
 students.forEach((el) => scorePointsStud(el));
